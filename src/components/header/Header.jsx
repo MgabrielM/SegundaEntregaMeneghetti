@@ -1,14 +1,16 @@
 import React from 'react'
 import { Carrito } from './Carrito'
 import { NavBar } from './NavBar'
+import tituloLogo from '../../images/tituloLogo.png'
 
-export const Header = () => {
+export const Header = ({valorModificado}) => {
+
+
   return (
     <header className='header'>
-        <h1>GaboShop</h1>
+        <img src={tituloLogo} className='titulo-logo'/>
         <NavBar/>
-        <Carrito/>
-    </header>
-    
+        <Carrito valor={valorModificado}/>
+    </header>    
   )
 }

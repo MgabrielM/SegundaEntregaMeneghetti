@@ -4,23 +4,37 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color:rgb(243, 243, 207);
+}
+
 .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
-    background-color: beige;
+    background-color: red;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-menu{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
     list-style-type: none;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .nav-link{
     text-decoration: none;
-    color: red;
+    color: white;
+    font-weight: bolder;
 }
 
 .productos-contenedor{
@@ -28,4 +42,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(235, 207, 172);
+}
+
+.titulo-logo{
+    width: 200px;
+    height: auto;
+}
+
+.contenedor-carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(230, 154, 33, 0.937);
+    border-radius: 10px;
+    padding: 3px 7px;
+}
+
+.carrito-valor{
+    font-weight: bolder;
+    font-size: 18px;
 }
