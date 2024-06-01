@@ -10,7 +10,7 @@ export const Header = ({valorModificado}) => {
   return (
     <header className='header'>
       <div className='header-contenedor'>
-          <Link to="/" className='header-contenedor-logo link'><img src={tituloLogo} className='titulo-logo'/><h1>Natura</h1></Link>
+          <Link to="/" className='header-contenedor-logo'><img src={tituloLogo} className='titulo-logo'/></Link>
           <NavBar/>
           <Carrito valor={valorModificado}/>
       </div>        

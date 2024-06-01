@@ -4,8 +4,9 @@ import { ItemListContainer } from "./components/ItemListContainer"
 import { Header } from "./components/header/Header"
 import { Footer } from "./components/footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Item } from "./components/Item";
 import { Hero} from "./components/Hero"
+import { ItemDetailContainer } from "./components/ItemDetailContainer";
+import { NotFound } from "./components/NotFound";
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
             </>
           }></Route>
           <Route path="/category/:categoryId"  element={<ItemListContainer />}></Route>          
-          <Route path="/item/:itemId" element={<Item/>}></Route>
+          <Route path="/item/:itemId" element={<ItemDetailContainer/>}></Route>
+          <Route path="/*" element={<NotFound/>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

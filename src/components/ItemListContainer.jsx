@@ -37,7 +37,9 @@ export const ItemListContainer = () => {
 
   return (
     <div className='productos-contenedor'>
-      <h1>{titulo}</h1>
+      <div className='productos-contenedor-titulo' >
+        <h1>{titulo}</h1>
+      </div>
       <ItemList producto={producto} />      
     </div>
   )
