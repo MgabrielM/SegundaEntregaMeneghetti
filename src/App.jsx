@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>      
         <Header/>
         <Routes>          
-          <Route path="/"  element={
+          <Route path="/SegundaEntregaMeneghetti"  element={
             <>
               <Hero />
               <ItemListContainer />            

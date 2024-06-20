@@ -24,7 +24,6 @@ export const Item = ({producto}) => {
           <p>Categoria: {producto.clasificacion}</p>
           <Link to={`/item/${producto.id}`}  producto={{producto}}>Mas información [+]</Link>
           <button onClick={agregarProductosAlCarrito}>Agregar al carrito</button>
-          <button onClick={agregarProductosAlCarrito}>Agregar al carrito</button>
         </div>
       </div>
     );
