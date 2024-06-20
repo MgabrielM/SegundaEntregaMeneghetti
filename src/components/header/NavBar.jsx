@@ -6,7 +6,7 @@ export const NavBar = () => {
         <nav className='nav'>
             <ul className='nav-menu'>
               <li>
-              <NavLink to="/" className='nav-link' >Inicio</NavLink>
+              <NavLink to="/SegundaEntregaMeneghetti" className='nav-link' >Inicio</NavLink>
               </li>
               {/* {
                 clasificacion.map((categoria) => {
