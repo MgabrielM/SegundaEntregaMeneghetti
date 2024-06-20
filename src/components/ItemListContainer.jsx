@@ -1,44 +1,33 @@
-import React, {useEffect, useState } from 'react';
-import { productos } from "../data/db.json";
-import { clasificacion } from "../data/db.json";
+import React, {useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ItemList } from './ItemList';
+import { db } from '../firebase/config';
+import { collection, getDocs } from 'firebase/firestore';
 
 export const ItemListContainer = () => {
 
   let {categoryId} = useParams();
   let [producto, setProductos] = useState([]);
   let [titulo, setTitulo] = useState("Productos");
-  
-  const pedirProductos = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productos);
-      }, 1000);
-    })
-  }
 
-  useEffect(() => {
-    
-    pedirProductos()
-      .then((res) => {
-        if (!categoryId) {
-          setTitulo("Productos");
-          setProductos(res);
-        } else {
-          setTitulo(clasificacion.find((cat) => cat.id === categoryId).nombre);
-          setProductos(res.filter((prod) => prod.clasificacion === categoryId));
-        }
-      })
-      
-  }, [categoryId]);
-
-  
+  useEffect(() => {    
+    const productosRef = collection(db, "Productos");
+    getDocs(productosRef)
+      .then((res) => 
+        setProductos(
+          res.docs.map((doc)=>
+            {
+              return {...doc.data(), id: doc.id}
+            }
+          )
+        )
+    )
+}, [categoryId]);
 
   return (
     <div className='productos-contenedor'>
       <div className='productos-contenedor-titulo' >
-        <h1>{titulo}</h1>
+        <h3>{titulo}</h3>
       </div>
       <ItemList producto={producto} />      
     </div>

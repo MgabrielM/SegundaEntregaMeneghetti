@@ -5,56 +5,64 @@
       "nombre": "Ekos Maracuyá",
       "marca": "Natura",
       "detalle": "Esta crema corporal está inspirada en las notas intrigantes y misteriosas del maracuyá, evocando la sensación de una película de M. Night Shyamalan. Proporciona una hidratación profunda y un aroma exótico que perdura, ideal para quienes buscan un cuidado de la piel único y refrescante.",
-      "clasificacion": "Cuerpo"
+      "clasificacion": "Cuerpo",
+      "precio": 12000
     },
     {
       "id": 2,
       "nombre": "Ekos Castanha",
       "marca": "Natura",
       "detalle": "Con un toque audaz y distintivo como una película de Tarantino, esta crema corporal de castanha ofrece una hidratación intensa y duradera. Su fórmula enriquecida con aceite de castaña es perfecta para revitalizar la piel seca, dejándola suave y con un aroma envolvente y cálido",
-      "clasificacion": "Cuerpo"
+      "clasificacion": "Cuerpo",
+      "precio": 15000
     },
     {
       "id": 3,
       "nombre": "Delineador Faces",
       "marca": "Natura",
       "detalle": "Inspirado en el vibrante y colorido estilo de Almodóvar, este delineador ofrece un trazo preciso y duradero. Su fórmula de alta pigmentación garantiza un color intenso y de larga duración, perfecto para crear looks atrevidos y expresivos.",
-      "clasificacion": "Belleza"
+      "clasificacion": "Belleza",
+      "precio": 9000
     },
     {
       "id": 4,
       "nombre": "Lapiz labial Faces",
       "marca": "Natura",
       "detalle": "Con la intensidad y el dramatismo de una película de Zack Snyder, este lápiz labial ofrece un color audaz y duradero. Su fórmula cremosa proporciona una cobertura completa con un acabado mate, ideal para un look impactante y sofisticado.",
-      "clasificacion": "Belleza"
+      "clasificacion": "Belleza",
+      "precio": 8000
     },
     {
       "id": 5,
       "nombre": "Crema corporal Tododia",
       "marca": "Natura",
       "detalle": "Esta crema corporal, inspirada en el estilo cálido y humano de Jonathan Demme, es perfecta para el cuidado diario. Enriquecida con ingredientes naturales, proporciona una hidratación profunda y deja la piel suave y nutrida, con un aroma delicado y reconfortante.",
-      "clasificacion": "Cuerpo"
+      "clasificacion": "Cuerpo",
+      "precio": 8500
     },
     {
       "id": 6,
       "nombre": "Luna Absoluta",
       "marca": "Natura",
       "detalle": "Como una película de Robert Zemeckis, este perfume te lleva a un viaje olfativo inolvidable. Con notas sofisticadas y envolventes, Luna Absoluta es una fragancia intensa y duradera que evoca elegancia y misterio.",
-      "clasificacion": "Perfume"
+      "clasificacion": "Perfume",
+      "precio": 22000
     },
     {
       "id": 7,
       "nombre": "Ekos Encanto das flores",
       "marca": "Natura",
       "detalle": "Inspirado en el surrealismo de Luis Buñuel, este perfume combina notas florales y exóticas para crear una fragancia única y cautivadora. Ideal para quienes buscan una experiencia sensorial diferente y memorable.",
-      "clasificacion": "Perfume"
+      "clasificacion": "Perfume",
+      "precio": 55000
     },
     {
       "id": 8,
       "nombre": "Ekos Encanto das flores",
       "marca": "Natura",
       "detalle": "Este perfume evoca la esencia de las flores exóticas con un toque surrealista. Perfecto para momentos especiales, deja una impresión duradera y encantadora.",
-      "clasificacion": "Perfume"
+      "clasificacion": "Perfume",
+      "precio": 37000
     }
   ],
 

@@ -1,18 +1,20 @@
 import React from 'react'
-import { Carrito } from './Carrito'
+import { CartWidget } from './CartWidget'
 import { NavBar } from './NavBar'
 import tituloLogo from '../../images/logo.png'
 import { Link } from 'react-router-dom'
 
 
-export const Header = ({valorModificado}) => {
+export const Header = () => {
 
   return (
     <header className='header'>
       <div className='header-contenedor'>
           <Link to="/" className='header-contenedor-logo'><img src={tituloLogo} className='titulo-logo'/></Link>
           <NavBar/>
-          <Carrito valor={valorModificado}/>
+          <Link className='header-contenedor-carrito' to="../Carrito" >
+            <CartWidget/>
+          </Link>
       </div>        
     </header>    
   )

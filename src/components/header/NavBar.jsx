@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import {clasificacion} from "../../data/db.json"
 
 export const NavBar = () => {
   return (        
@@ -9,15 +8,15 @@ export const NavBar = () => {
               <li>
               <NavLink to="/" className='nav-link' >Inicio</NavLink>
               </li>
-              {
+              {/* {
                 clasificacion.map((categoria) => {
                   return(
-                    <li>
+                    <li key={categoria.id}>
                       <NavLink to={`/category/${categoria.id}`} className='nav-link' >{categoria.nombre}</NavLink>
                     </li>
                   )
                 })
-              }
+              } */}
             </ul>            
         </nav>
   )
