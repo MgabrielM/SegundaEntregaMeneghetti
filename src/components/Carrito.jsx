@@ -39,7 +39,7 @@ export const Carrito = () => {
         :
         <>
           <h6>Usted no tiene productos agreagados al carrito.</h6>
-          <h6>Vea nuestro catalogo de productos <Link to="/">aquí</Link>.</h6>
+          <h6>Vea nuestro catalogo de productos <Link to="/SegundaEntregaMeneghetti">aquí</Link>.</h6>
         </>
     }      
     </div>

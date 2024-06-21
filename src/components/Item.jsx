@@ -14,10 +14,11 @@ export const Item = ({producto}) => {
     const agregarProductosAlCarrito = () =>{
       handlerCarrito(producto);
     }
+
       
     return (
       <div key={producto.id} className="producto">
-        <img src={images[producto.id]} alt={`Imagen de ${producto.nombre}`} />
+        <img src={images[producto.imagen]} alt={`Imagen de ${producto.nombre}`} />
         <div className='producto-descripcion'>
           <h2>{producto.nombre}</h2>
           <h3>Marca: {producto.marca}</h3>          
