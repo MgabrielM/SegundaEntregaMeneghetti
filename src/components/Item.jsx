@@ -23,6 +23,7 @@ export const Item = ({producto}) => {
           <h2>{producto.nombre}</h2>
           <h3>Marca: {producto.marca}</h3>          
           <p>Categoria: {producto.clasificacion}</p>
+          <p>Precio: {producto.precio}</p>
           <Link to={`/item/${producto.id}`}  producto={{producto}}>Mas información [+]</Link>
           <button onClick={agregarProductosAlCarrito}>Agregar al carrito</button>
         </div>

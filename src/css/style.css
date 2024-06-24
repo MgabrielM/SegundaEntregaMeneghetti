@@ -6,10 +6,12 @@
     box-sizing: border-box;
 }
 
-body{    
+body{   
+    width: 100%;
+    height: auto; 
     background-color: rgb(235, 207, 172);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -20,7 +22,7 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    background-color: rgb(255, 102, 2);
+    background-color: rgb(241, 112, 26);
     padding: 0 15%;
 }
 
@@ -176,8 +178,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 250px;
-    height: 340px;
+    width: 220px;
+    height: 350px;
     background-color:rgb(235, 222, 203);
     padding: 15px;
     border-radius: 15px;
@@ -204,9 +206,13 @@ body{
     color:rgb(255, 102, 2);
 }
 
+.producto-descripcion p{
+    height: 10px;
+}
+
 .producto img{
-    width: 220px;
-    height: 180px;
+    width: 185px;
+    height: 150px;
     border-radius: 10px;
 }
 
@@ -234,8 +240,14 @@ body{
     border-radius: 150px;
 }
 
+.producto button{
+    width: 195px;
+    background-color:rgba(22, 178, 22, 0.748);
+    margin-right: 15px;
+}
+
 .carrito-contenedor{
-    width: 650px;
+    width: 750px;
     height: auto;    
     background-color:rgb(241, 224, 212);
     margin-top: 40px;
@@ -247,9 +259,8 @@ body{
 }
 
 .carrito-contenedor div{
-    width: 420px;
+    width: 720px;
     display: flex;
-    flex-direction: column;
 }
 
 #root{
@@ -261,4 +272,162 @@ body{
     height: auto;
     justify-content: center;
     align-items: center;
+}
+
+.footer-contenedor{
+    width: 100%;
+    height: 150px;
+}
+
+.form-container {
+    margin-top: 35px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  button {
+    padding: 5px;
+    /* background-color: #007bff; */
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .boton-finalizar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-finalizar:hover {
+    background-color: #fb8c00;
+    transform: translateY(-2px);
+}
+
+.boton-finalizar:active {
+    background-color: #f57c00;
+    transform: translateY(0);
+}
+
+.boton-cancelar {
+    margin-top:10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-cancelar:hover {
+    background-color: rgb(222, 22, 22);
+    transform: translateY(-2px);
+}
+
+.boton-cancelar:active {
+    background-color: #f57c00;
+    transform: translateY(0);
+}
+
+.boton-anular{
+    background-color: red;
+    width: 150px;
+    height: 30px;
+}
+
+.boton-anular:hover{
+    background-color: rgb(248, 10, 10);
+}
+
+.contenedor-carrito-visualizacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;   
+    margin-bottom: 15px; 
+    border: rgb(178, 221, 178) 1px solid;
+}
+
+.contenedor-carrito-visualizacion h6{
+    width: 400px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.carrito-contenedor h5{
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: gray 1px solid;
+    font-weight: bolder;
+}
+
+.producto-detalle div{
+    display: flex;
+    gap: 45px
+}
+
+.verde {
+    background-color: green;
+}
+
+.verde:hover {
+    background-color: rgb(8, 159, 8);
+}
+
+
+.rojo {
+    background-color: red;
+}
+
+.rojo:hover{
+    background-color: rgb(248, 10, 10);
+}
+
+.contenedor-carritodetail{
+    width: 1200px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }

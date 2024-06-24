@@ -14,7 +14,6 @@ export const NavBar = () => {
     .then((res) =>
     {
       setCategoria(
-
         res.docs.map((doc)=>{
           return {
             ...doc.data() , id: doc.id

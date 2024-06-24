@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext';
 import "../css/style.css"
-import { Link } from 'react-router-dom';
-import Toastify from 'toastify-js'
+import { Link, useNavigate } from 'react-router-dom';
+import Toastify from 'toastify-js';
+
 
 export const Carrito = () => {  
 
-  const {carrito, vaciarCarrito} = useContext(CartContext);
-  console.log(carrito);
+  const {setCarrito, carrito, vaciarCarrito, calcularCantidadTotalCarrito} = useContext(CartContext);
 
   const botonVaciarCarrito = () =>{
     vaciarCarrito();
@@ -18,23 +18,33 @@ export const Carrito = () => {
     Toastify({
       text: "Su carrito se ha vaciado.", 
       duration: 3000,
-      gravity: "bottom", // `top` or `bottom`
-      position: "left", // `left`, `center` or `right`
+      gravity: "bottom", 
+      position: "left", 
       style: {
         background: "red",
         width: "250px",
       },
     }).showToast();;
+
+    const eliminarItem = (id) => {
+      setCarrito(carrito.filter(prod => prod.id !== id));
+    };
   
   return (
     <div className='carrito-contenedor'>
-      <h3>Productos</h3>
+      <h4>Productos</h4>
       {carrito.length > 0 ?
         <>
-          <div>
-            {(carrito) ? carrito.map((prod) => <h4>{prod.nombre} {prod.precio}</h4>) : "Carrito vacio"}      
-            <button onClick={botonVaciarCarrito}>Vaciar carrito</button>
-          </div>
+            {(carrito) ? carrito.map((prod) => 
+            <div className='contenedor-carrito-visualizacion'>
+              <button className='boton-anular' onClick={ () => eliminarItem(prod.id)}>Anular</button>
+              <h6>Cant. {prod.cantidad} - {prod.nombre} - Precio total: {prod.precio}</h6>              
+            </div>
+            ) : "Carrito vacio"}      
+        
+            <h5>Total: {calcularCantidadTotalCarrito()}</h5>
+            <Link to="/CarritoDetail" className= "boton-finalizar ">Finalizar compra</Link>
+            <button className="boton-cancelar" onClick={botonVaciarCarrito}>Vaciar carrito</button>
         </>
         :
         <>

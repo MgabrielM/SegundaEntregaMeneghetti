@@ -18,8 +18,10 @@ export const ItemDetail = ({producto}) => {
             <h2>{producto.nombre}</h2>
             <h3>Categoria: {producto.clasificacion}</h3>
             <p>{producto.detalle}</p>
-            <button onClick={agregarProductosAlCarrito}>Agregar producto al carrito</button>
-            <Link to="/SegundaEntregaMeneghetti" >Volver</Link>
+            <div>
+              <Link to="/SegundaEntregaMeneghetti" className= "boton-finalizar rojo">Volver</Link>
+              <button className="boton-finalizar verde" onClick={agregarProductosAlCarrito}>Agregar producto al carrito</button>              
+            </div>
         </div>      
     </div>
   )  

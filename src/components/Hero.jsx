@@ -1,7 +1,7 @@
 import React from 'react'
-import heroUno from '../images/hero.jpg'
-import heroDos from '../images/hero2.jpg'
-import heroTres from '../images/hero3.png'
+import heroUno from '../../public/images/hero.jpg'
+import heroDos from '../../public/images/hero2.jpg'
+import heroTres from '../../public/images/hero3.png'
 
 export const Hero = () => {
   return (
