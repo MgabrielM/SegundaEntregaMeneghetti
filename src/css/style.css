@@ -431,3 +431,12 @@ body{
     justify-content: center;
     align-content: center;
 }
+
+.historial-pedidos-creados{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}

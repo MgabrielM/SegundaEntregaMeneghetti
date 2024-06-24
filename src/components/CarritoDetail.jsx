@@ -13,7 +13,7 @@ export const CarritoDetail = () => {
     let [pedidos, setPedidos] = useState([]);
 
     const comprar = (data) =>{
-      const fecha = new Date();
+
 
       const pedido = {
         cliente: data,
@@ -28,19 +28,25 @@ export const CarritoDetail = () => {
       .then((doc) => {
         setDocId(doc.id);
         vaciarCarrito();
+        console.log(pedidos);
       })
     }
 
-    // useEffect(()=>{
-    //   const pedidosRef = doc(db, "pedidos", docId);
-    //       getDoc(pedidosRef)
-    //         .then((res) => 
-    //         setPedidos(({ ...res.data() , idf: res.id }))
-    //       )
+    useEffect(()=>{
+      const productosRef = collection(db, "pedidos");
+      getDocs(productosRef)
+        .then((res) => 
+          setPedidos(
+            res.docs.map((doc)=>
+              {
+                return {...doc.data(), id: doc.id}              
+              }
+          )
+          
+      )      
+      
+      )}), [pedidos]
 
-    //       console.log(...pedidos);
-    //     }  
-    //   ), []
 
   return (
 
@@ -50,7 +56,8 @@ export const CarritoDetail = () => {
         <div>
           Muchas gracias por realizar la compra. El numero de pedido creado es: {docId}
         </div>
-        
+       
+                  
       </div>
       :
       <div className='contenedor-carritodetail'>
@@ -67,11 +74,19 @@ export const CarritoDetail = () => {
               </form>
             </div>
       </div>
-      }
-
-      <div>
-        Historial de pedidos creados:
-      </div>
+      }      
+        <div className='historial-pedidos-creados'>          
+          {pedidos ?
+            pedidos.slice(0,10).map((ped) => {
+              return (
+            <div>
+              <div>
+                {ped.id}
+              </div>
+               Creado por: {ped.cliente.nombre}Precio: {ped.cantidadTotal} -Estado: {ped.estado} - {ped.productos.length}
+            </div>
+            )}): "Sin historial de pedidos creados."}
+        </div>
     </>
   )
 }
