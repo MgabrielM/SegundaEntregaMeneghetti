@@ -430,13 +430,102 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-bottom: 30px;
 }
 
-.historial-pedidos-creados{
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    gap:10px;
-}
+.contenedor-pedidos-creados {
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    gap: 30px;
+  }
+  
+  .historial-pedidos-creados {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+  }
+  
+  .historial-pedidos-creados div {
+    margin-bottom: 5px;
+  }
+  
+  .historial-pedidos-creados div:first-child {
+    font-weight: bold; 
+  }
+  
+  .historial-pedidos-creados div:nth-child(2) {
+    color: #666; 
+  }
+
+  .contenedor-aviso {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: #e6ffe6; 
+    border: 2px solid #b3ffb3; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+  }
+  
+  .aviso-texto {
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #4CAF50;
+  }
+  
+  .aviso-texto span {
+    display: block; 
+    margin-top: 10px; 
+    font-size: 20px; 
+    color: #388E3C; 
+  }
+  
+  .contenedor-pedidos-creados {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contenedor-pedidos-creados h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .historial-pedidos-creados {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .historial-pedidos-creados div {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .historial-pedidos-creados div:first-child {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .historial-pedidos-creados div:last-child {
+    font-style: italic;
+    color: #777;
+  }
+  

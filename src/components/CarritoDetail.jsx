@@ -42,22 +42,29 @@ export const CarritoDetail = () => {
                 return {...doc.data(), id: doc.id}              
               }
           )
-          
       )      
       
       )}), [pedidos]
 
 
+      const formatearFecha = (timestamp) => {
+        
+        if (timestamp) {
+          const date = timestamp.toDate(); 
+          return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+        } else{          
+          "No es posible mostrar la fecha de creación."
+        }
+      };
+
   return (
 
     <>
       {docId ?  
-      <div>        
-        <div>
+      <div className='contenedor-aviso'>
+        <div  className='aviso-texto'>
           Muchas gracias por realizar la compra. El numero de pedido creado es: {docId}
         </div>
-       
-                  
       </div>
       :
       <div className='contenedor-carritodetail'>
@@ -74,19 +81,19 @@ export const CarritoDetail = () => {
               </form>
             </div>
       </div>
-      }      
-        <div className='historial-pedidos-creados'>          
-          {pedidos ?
-            pedidos.slice(0,10).map((ped) => {
-              return (
-            <div>
-              <div>
-                {ped.id}
-              </div>
-               Creado por: {ped.cliente.nombre}Precio: {ped.cantidadTotal} -Estado: {ped.estado} - {ped.productos.length}
+      }
+      <div className='contenedor-pedidos-creados'>  
+        <h2>HISTORIAL DE PEDIDOS CREADOS</h2>        
+        {pedidos ?
+          pedidos.slice(0, 3).map((ped, index) => (
+            <div className='historial-pedidos-creados' key={index}>
+              <div>ID: {ped.id}</div>
+              <div>Precio: {ped.cantidadTotal}</div>
+              <div>Estado: {ped.estado}</div>
+              <div>Fecha de creación: {formatearFecha(ped.fechaCreacion)}</div>
             </div>
-            )}): "Sin historial de pedidos creados."}
-        </div>
-    </>
+          )) : "Sin historial de pedidos creados."}
+      </div>
+  </>
   )
 }
